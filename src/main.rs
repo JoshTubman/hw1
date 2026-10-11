@@ -54,6 +54,17 @@ fn roll_die(seed: u64) -> u64 {
     rng.random_range(1..=6)
 }
 
+fn roll_many(seed: u64, count: u64) -> u64 {
+    let mut total = 0;
+
+    for i in 0..count {
+        total += roll_die(seed + i);
+    }
+
+    total
+}
+
+
 fn main() {
 print_menu();
 
@@ -68,6 +79,8 @@ let number = read_number(1, 5);
 println!("You entered: {number}");
 
 println!("Rolling: {}", roll_die(100));
+
+println!("Total: {}", roll_many(100, 3));
 
 }
 
