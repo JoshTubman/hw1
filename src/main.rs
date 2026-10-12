@@ -142,13 +142,13 @@ let seed = read_number(1, MAX_SEED);
             }
 
             Trade => {
-                let total = roll_many(seed + roll_count, CavaranDice);
-                roll_count += CavaranDice;
+                let total = roll_many(seed + roll_count, CaravanDice);
+                roll_count += CaravanDice;
 
-                gold += CavaranDice * total;
+                gold += CaravanDice * total;
                 day += 1;
 
-                println!("The caravan gave you {} gold.", CavaranMulti * total);
+                println!("The caravan gave you {} gold.", CaravanMulti * total);
             }
 
             Status => {
